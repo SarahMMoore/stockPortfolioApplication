@@ -1,3 +1,11 @@
+/*
+ * Class Name: TransactionHistory
+ * Author: Sarah Moore
+ * Date created: 05. February 2026
+ * Purpose: Defines a transaction and 
+ * provides the template for storing data.
+ */
+
 package stockPortfolio;
 
 public class TransactionHistory {
