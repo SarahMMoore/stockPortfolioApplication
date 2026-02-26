@@ -35,22 +35,23 @@ public class PortfolioManager {
 		int choice = -1;
 		
 		
-		String brokerName = "Sarah Moore ";									// Broker Name
-		String brokerageTitle = "Brokerage Account";						// Brokerage Title
-		String welcomeMessage = "Welcome to your portfolio. " +				// Welcome message and instructions
-				"\nI keep track of:  Stock purchases, stock sales, " +
-				"\n                  cash desposits, and cash withdraws" +
-				"\nHow can I help you today?\n\n";
-		String brokerageMenu = "\tMenu" +									// Menu
-				"\n\t\t0 - Exit" +
-				"\n\t\t1 - Desposit Cash" + 
-				"\n\t\t2 - Withdraw Cash" +
-				"\n\t\t3 - Buy Stock" + 
-				"\n\t\t4 - Sell Stock" +
-				"\n\t\t5 - Display Transaction History" +
-				"\n\t\t6 - Display Portfolio";
+		String brokerName = "Sarah Moore ";									
+		String brokerageTitle = "Brokerage Account\n";						
+		String welcomeMessage = "Welcome to your portfolio.\n" +				
+				"I keep track of:\n\tStock purchases, stock sales, " +
+				"\n\tcash desposits, and cash withdraws";
+		String brokerageMenu = "\nHow can I help you today? " +
+				"\nPlease choose an option from the menu\n" +
+				"\n  MENU" +									
+				"\n\t0 - Exit" +
+				"\n\t1 - Desposit Cash" + 
+				"\n\t2 - Withdraw Cash" +
+				"\n\t3 - Buy Stock" + 
+				"\n\t4 - Sell Stock" +
+				"\n\t5 - Display Transaction History" +
+				"\n\t6 - Display Portfolio";
 		String printTransMessage = "%s | %-6s | %-8s | %-5.2f | $%.2f%n";
-		String userOption = "Please enter a number 1 to 6 or 0 to exit: ";	// Ask for user input
+		String userOption = "\nEnter an option 1 through 6, or enter 0 to exit: ";	
 		String exitMessage = "Thank you! Good bye!";
 		String userQty = "QTY";
 		String depMessage = "Amount to deposit: ";
@@ -59,23 +60,24 @@ public class PortfolioManager {
 		String tickMessage = "Ticker: ";
 		String qtyMessage = "Quantity: "; 
 		String nsfCashMessage = "Not enough cash!";
-		String invalidInput = "Invalid entry. ";							// Invalid entry
+		String invalidInput = "Invalid entry. ";							
 		String ppsMessage = "Price per share: ";
 		String spMessage = "Selling price: ";
 		String ownMessage = "Error: You do not own any shares of ";
 		String nsfSharesMessage = "Error: Insufficient shares. You only own %.2f shares of %s.%n";
 		String portHead = "\nDate       | Ticker | Type     | Qty   | Cost/Price";
 		String currentCsh = "Current Cash Balance: $";
-		String histMessage = "View History (Option 5) for full details.";
+		String histMessage = "View History (Option 5) for full details.\n";
 
 		String stckMessage = "\n--- Current Stock Holdings ---";
 		String successMsg = "Sale successful!";
 		
 		while (choice != 0) {
-			System.out.println(brokerName + brokerageTitle);			// Name of Brokerage Account
-			System.out.println(welcomeMessage);							// Program description and function
-			System.out.println(brokerageMenu);							// Brokerage Menu
-			if (input.hasNextInt()) {									// User inputs menu choice
+			System.out.println(brokerName + brokerageTitle);			
+			System.out.println(welcomeMessage);							
+			System.out.println(brokerageMenu);
+			System.out.println(userOption);
+			if (input.hasNextInt()) {									
 				choice = input.nextInt();
 				input.nextLine();
 			}
